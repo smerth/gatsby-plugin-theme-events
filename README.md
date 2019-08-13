@@ -66,7 +66,7 @@ By default the theme creates a `data` folder @ host-site `site/src` but this can
 
 @ gatsby-config.js
 
-```json
+```javascript
 module.exports = {
   plugins: [
     {
@@ -89,4 +89,3 @@ The theme uses `gatsby-plugin-theme-ui` to deliver a theme object to components.
 This theme contains an example of customizing Gatsby's GraphQL Schema. An `event` type is explicitly defined and then a custom interface "maps" the json and yaml event data to the `event` type.
 
 Custom resolvers are used to rename fields and format date data.
-
