@@ -4,6 +4,8 @@
 
 A repo for publishing an gatsby theme package to NPM.
 
+The NPM package is available here: [@smerth/gatsby-theme-events](https://www.npmjs.com/package/@smerth/gatsby-theme-events)
+
 The repo contains the theme and a site for testing the theme, organised as a yarn workspace. The two workspaces are:
 
 - `site`
