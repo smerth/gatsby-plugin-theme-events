@@ -1,0 +1,35 @@
+{
+  "name": "@smerth/gatsby-theme-events",
+  "version": "1.0.0",
+  "description": "Install events content type in a gatsby site with data source and  page rendering",
+  "main": "index.js",
+  "author": "Stephen Merth <stephen.merth@gmail.com> (https://smerth.github.io/)",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "develop": "gatsby develop",
+    "clean": "gatsby clean"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.13.57",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "devDependencies": {
+    "gatsby": "^2.13.57",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.15",
+    "@emotion/styled": "^10.0.15",
+    "@mdx-js/react": "^1.2.2",
+    "gatsby-plugin-theme-ui": "^0.2.33",
+    "gatsby-source-filesystem": "^2.1.9",
+    "gatsby-transformer-json": "^2.2.2",
+    "gatsby-transformer-yaml": "^2.2.4",
+    "theme-ui": "^0.2.33"
+  }
+}

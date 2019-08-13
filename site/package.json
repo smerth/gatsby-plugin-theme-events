@@ -1,0 +1,21 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "Gatsby demo site for developing packages, plugins and themes",
+  "main": "index.js",
+  "author": "Stephen Merth <stephen.merth@gmail.com> (https://smerth.github.io/)",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "develop": "gatsby develop",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@smerth/gatsby-theme-events": "*",
+    "gatsby": "^2.13.57",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  }
+}
