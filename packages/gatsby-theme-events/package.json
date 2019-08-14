@@ -11,7 +11,7 @@
     "serve": "gatsby serve",
     "develop": "gatsby develop",
     "clean": "gatsby clean",
-    "pre-release": "np"
+    "pre-release": "np --access public"
   },
   "peerDependencies": {
     "gatsby": "^2.13.57",
