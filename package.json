@@ -3,5 +3,8 @@
   "workspaces": [
     "packages/*",
     "site"
-  ]
+  ],
+  "scripts": {
+    "release": "yarn workspace @smerth/gatsby-theme-events pre-release"
+  }
 }
