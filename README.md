@@ -2,9 +2,7 @@
 
 ## Overview
 
-A repo for publishing an gatsby theme package to NPM.
-
-The NPM package is available here: [@smerth/gatsby-theme-events](https://www.npmjs.com/package/@smerth/gatsby-theme-events)
+This is the code base for the NPM package: [@smerth/gatsby-theme-events](https://www.npmjs.com/package/@smerth/gatsby-theme-events)
 
 The repo contains the theme and a site for testing the theme, organised as a yarn workspace. The two workspaces are:
 
@@ -13,13 +11,13 @@ The repo contains the theme and a site for testing the theme, organised as a yar
 
 `@smerth/gatsby-theme-events` creates a simple events content type and adds a listing page for events and a page for each separate event.
 
-This theme is based on the free online course [gatsby-theme-authoring](https://egghead.io/courses/gatsby-theme-authoring) by Jason Lengstorf at the egg-cellant [Egghead.IO](https://egghead.io/) with the following changes
+This theme is based on the free online course [gatsby-theme-authoring](https://egghead.io/courses/gatsby-theme-authoring) by Jason Lengstorf at the egg-cellant [Egghead.IO](https://egghead.io/) with the following changes:
 
-- implementation of a custom grahpql interface to merge json and yams data sources into a single graphql type called `event`
+- implementation of a custom grahpql interface to merge json and yaml data sources into a single graphql type called `event`
 - use of the new `gatsby-plugin-theme-ui`
-- example of using the JSX prama to use `theme.js` variables to style the gatsby `Link` component.
+- example of using the JSX prama `/** @jsx jsx */` in the `StyledLink` component be able to access `theme.js` variables to style the Gatsby `Link` component
 
-## Theme overrides:
+## Usage:
 
 ### Data source:
 
@@ -64,9 +62,9 @@ or, for yaml this:
   url: http://craigslist.org/libero.png
 ```
 
-By default the theme creates a `data` folder @ host-site `site/src` but this can be overridden in the plugin config. The base path for listing and event pages can also be set in the config, like this:
+By default the theme creates a `data` folder @ `host-site/site/src` but this can be overridden in the plugin config. The base path for listing and event pages can also be set in the config, like this:
 
-@ gatsby-config.js
+@ host-site/gatsby-config.js
 
 ```javascript
 module.exports = {
@@ -88,6 +86,8 @@ The theme uses `gatsby-plugin-theme-ui` to deliver a theme object to components.
 
 ## GraphQL Customization
 
-This theme contains an example of customizing Gatsby's GraphQL Schema. An `event` type is explicitly defined and then a custom interface "maps" the json and yaml event data to the `event` type.
+This theme contains an example of customizing Gatsby's GraphQL Schema.
 
-Custom resolvers are used to rename fields and format date data.
+An `event` interface is defined. This interface is then implemented by the jsonEvents and yamlEvents types.
+
+Field extentions are used to rename fields (for example: `@proxy(from: "start_date")`), and to set date formats (for example: `@dateformat`.)

@@ -24,7 +24,7 @@ exports.onPreBootstrap = ({ reporter }, options) => {
 //     `);
 // };
 
-// 2. Add a slug field to yamlEvents and jsonEvents nodes
+// 2. Add a slug field to yamlEvents and jsonEvents grahpql types
 exports.sourceNodes = ({ actions }) => {
   actions.createTypes(`
       type yamlEvents implements Node {
@@ -38,7 +38,7 @@ exports.sourceNodes = ({ actions }) => {
     `);
 };
 
-// 3 a. Create a slug and add it to the slug field on jsonEvents and yamlEvents
+// 3 a. Create a slug and add it to the slug field on jsonEvents and yamlEvents graphql types
 exports.createResolvers = ({ createResolvers }, options) => {
   const basePath = options.basePath || "/";
 
@@ -65,7 +65,7 @@ exports.createResolvers = ({ createResolvers }, options) => {
   });
 };
 
-// 3 b. define the Event type which combines data from two sources
+// 3 b. define the Event interface which combines data from two source types
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
   const typeDefs = `
@@ -89,7 +89,7 @@ exports.createSchemaCustomization = ({ actions }) => {
         slug: String!
       }
       type yamlEvents implements Node & Event {
-          id: String!
+        id: String!
         name: String!
         location: String!
         startDate: Date! @dateformat @proxy(from: "start_date")
