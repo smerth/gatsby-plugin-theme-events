@@ -1,5 +1,7 @@
 # Gatsby Theme Events
 
+> IMPORTANT! - this theme is not meant for use in a live site. I am using this package as a place to learn about gatsby theming. I am going to make breaking changes!!
+
 ## Overview
 
 This is the code base for the NPM package: [@smerth/gatsby-theme-events](https://www.npmjs.com/package/@smerth/gatsby-theme-events)
