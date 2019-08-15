@@ -27,12 +27,12 @@ exports.onPreBootstrap = ({ reporter }, options) => {
 // 2. Add a slug field to yamlEvents and jsonEvents grahpql types
 exports.sourceNodes = ({ actions }) => {
   actions.createTypes(`
-      type yamlEvents implements Node {
+      type EventsYaml implements Node {
           slug: String!
       }
       `);
   actions.createTypes(`
-    type jsonEvents implements Node {
+    type EventsJson implements Node {
         slug: String!
     }
     `);
@@ -52,12 +52,12 @@ exports.createResolvers = ({ createResolvers }, options) => {
   };
 
   createResolvers({
-    jsonEvents: {
+    EventsJson: {
       slug: {
         resolve: source => slugify(source.name)
       }
     },
-    yamlEvents: {
+    EventsYaml: {
       slug: {
         resolve: source => slugify(source.name)
       }
@@ -79,7 +79,7 @@ exports.createSchemaCustomization = ({ actions }) => {
         slug: String!
 
       }
-      type jsonEvents implements Node & Event {
+      type EventsJson implements Node & Event {
         id: String!
         name: String!
         location: String!
@@ -88,7 +88,7 @@ exports.createSchemaCustomization = ({ actions }) => {
         url: String!
         slug: String!
       }
-      type yamlEvents implements Node & Event {
+      type EventsYaml implements Node & Event {
         id: String!
         name: String!
         location: String!

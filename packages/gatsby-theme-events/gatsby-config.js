@@ -10,13 +10,13 @@ module.exports = ({ contentPath = "data", basePath = "/" }) => ({
     {
       resolve: "gatsby-transformer-yaml",
       options: {
-        typeName: "yamlEvents"
+        typeName: "EventsYaml"
       }
     },
     {
       resolve: "gatsby-transformer-json",
       options: {
-        typeName: "jsonEvents"
+        typeName: "EventsJson"
       }
     }
   ]

@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout/index";
 import Event from "../components/event/index";
 
-export const query = graphql`
+export const pageQuery = graphql`
   query($eventID: String!) {
     event(id: { eq: $eventID }) {
       name
