@@ -3,7 +3,7 @@ module.exports = {
     {
       resolve: "@smerth/gatsby-theme-events",
       options: {
-        basePath: "/events",
+        basePath: "/",
         contentPath: "data"
       }
     }

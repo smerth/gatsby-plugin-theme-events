@@ -1,6 +1,6 @@
 {
   "name": "@smerth/gatsby-theme-events",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "description": "Install events content type in a gatsby site with data source and  page rendering",
   "main": "index.js",
   "author": "Stephen Merth <stephen.merth@gmail.com> (https://smerth.github.io/)",
@@ -16,11 +16,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "peerDependencies": {
-    "gatsby": "^2.13.57",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
-  },
   "devDependencies": {
     "gatsby": "^2.13.57",
     "react": "^16.9.0",
@@ -34,7 +29,6 @@
     "gatsby-source-filesystem": "^2.1.9",
     "gatsby-transformer-json": "^2.2.2",
     "gatsby-transformer-yaml": "^2.2.4",
-    "np": "^5.0.3",
     "theme-ui": "^0.2.33"
   }
 }
